@@ -1,41 +1,45 @@
 <div class="container">
   <div class="row">
     <div class="column">
+      <h1>{{ titulo }}</h1>
 
+      <form>
+        <div class="form-group">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Operando A</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Digite primer operando"
+              [(ngModel)]="operandoA"
+              name="operandoA"
+            />
+          </div>
 
-      <h1>{{titulo}}</h1>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Operando A</label
-        >
-        <input
-          type="number"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="Digite primer operando"
-          [(ngModel)]="operandoA"
-        />
-      </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label"
+              >Operando B</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="exampleFormControlInput2"
+              placeholder="Digite segundo operando"
+              [(ngModel)]="operandoB"
+              name="operandoB"
+            />
+          </div>
 
-      <div class="mb-3">
-        <label for="exampleFormControlInput2" class="form-label"
-          >Operando B</label
-        >
-        <input
-          type="number"
-          class="form-control"
-          id="exampleFormControlInput2"
-          placeholder="Digite segundo operando"
-          [(ngModel)]="operandoB"
-        />
-      </div>
+          <button type="submit" class="btn btn-success" (click)="sumar()">
+            Sumar
+          </button>
+        </div>
+      </form>
 
-      <button type="button" class="btn btn-success"
-      (click)="sumar()">
-        Sumar
-      </button>
-
-      <p>Resultado: {{this.resultado}}</p>
+      <p>Resultado: {{ this.resultado }}</p>
     </div>
   </div>
 </div>
